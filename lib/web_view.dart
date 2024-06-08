@@ -1,3 +1,4 @@
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:gazali/provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -51,10 +52,17 @@ class _WebViewStackState extends State<WebViewStack> {
               ? Container(
                   width: MediaQuery.sizeOf(context).width,
                   height: MediaQuery.sizeOf(context).height,
+                  // decoration: BoxDecoration(
+                  //     image: DecorationImage(
+                  //         image: AssetImage('assets/images/loading.jpeg'),fit: BoxFit.cover)),
                   alignment: Alignment.center,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
+                      SpinKitPouringHourGlassRefined(
+                        color: Color(0xffffd700),
+                        size: 50,
+                      ),
                       // CircularProgressIndicator(
                       //     value: provider.loadingPercentage / 100.0),
                       SizedBox(
