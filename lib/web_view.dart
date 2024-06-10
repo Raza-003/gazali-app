@@ -44,11 +44,13 @@ class _WebViewStackState extends State<WebViewStack> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
+      
       child: Consumer<AppProvider>(builder: (context, provider, child) {
         return Scaffold(
           resizeToAvoidBottomInset: true,
           body: provider.isLoading
               ? Container(
+                margin: EdgeInsets.symmetric(horizontal: 30,vertical: 30),
                   width: MediaQuery.sizeOf(context).width,
                   height: MediaQuery.sizeOf(context).height,
                   decoration: BoxDecoration(
