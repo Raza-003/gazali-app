@@ -13,6 +13,7 @@ class WebViewStack extends StatefulWidget {
 
 class _WebViewStackState extends State<WebViewStack> {
   WebViewController _controller = WebViewController();
+  
 
   @override
   void initState() {
@@ -43,6 +44,12 @@ class _WebViewStackState extends State<WebViewStack> {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarColor: Color(0xffc07d77), // Transparent status bar
+      statusBarBrightness: Brightness.dark, // Dark text for status bar
+      systemNavigationBarColor: Color(0xffc07d77),
+      systemNavigationBarDividerColor: Colors.transparent,
+    ));
     return SafeArea(
       
       child: Consumer<AppProvider>(builder: (context, provider, child) {
